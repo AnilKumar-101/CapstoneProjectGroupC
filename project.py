@@ -27,7 +27,7 @@ st.subheader('Observe the Stocks')
 # In[289]:
 
 #Reading input from user for portfolio size
-user_input = st.number_input('Enter portfio size: ', min_value=1000, value=5000, step=5000)
+user_input = st.number_input('Enter your portfolio size: ', min_value=1000, value=5000, step=5000)
 
 stocks = pd.read_csv('sp_500_stocks.csv')
 stocks = stocks[~stocks['Ticker'].isin(['DISCA', 'HFC','VIAC','WLTW'])]
