@@ -102,41 +102,10 @@ final_dataframe.reset_index(inplace = True)
 final_dataframe.drop('index', axis=1, inplace = True)
 
 
-# In[295]:
-
-
-#def portfolio_input():
-#    global portfolio_size
-#    portfolio_size = input("Enter the value of your portfolio:")
-#
-#    try:
-#        val = float(portfolio_size)
-#    except ValueError:
-#        print("That's not a number! \n Try again:")
-#        portfolio_size = input("Enter the value of your portfolio:")
-#
-#
-## In[296]:
-#
-#
-#portfolio_input()
-
-#portfolio_size = value
-
-#a_list = ["portfolio_size"]
-#float_list = list(map(float, a_list))
-#portfolio_size=float_list
-# In[297]:
-#a_list = ["user_input"]
-#float_list = str(map(float, a_list))
-#portfolio_size=float_list
-
-
 portfolio_size = float(user_input)
 position_size = portfolio_size/ len(final_dataframe.index)
 for i in range(0, len(final_dataframe['Ticker'])):
     final_dataframe.loc[i, 'Number of Shares to Buy'] = math.floor(position_size / final_dataframe['Price'][i])
-#final_dataframe
 
 
 # In[298]:
