@@ -26,13 +26,8 @@ st.header('Stock Prices 2022')
 st.subheader('Observe the Stocks')
 # In[289]:
 
-
+#Reading input from user for portfolio size
 user_input = st.number_input('Enter portfio size: ', min_value=1000, value=5000, step=5000)
-#portfolio_size = user_input.astype(float)
-#a_list = ["portfolio_size"]
-#a_list = list(map(int, a_list)
-
-
 
 stocks = pd.read_csv('sp_500_stocks.csv')
 stocks = stocks[~stocks['Ticker'].isin(['DISCA', 'HFC','VIAC','WLTW'])]
