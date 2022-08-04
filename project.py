@@ -26,7 +26,7 @@ st.header('Stock Prices 2022')
 st.subheader('Observe the Stocks')
 # In[289]:
 
-#user_input = st.text_input("Enter portfio size", key=int)
+
 user_input = st.number_input('Enter portfio size: ', min_value=1000, value=5000, step=5000)
 #portfolio_size = user_input.astype(float)
 #a_list = ["portfolio_size"]
@@ -46,7 +46,6 @@ from iexcreds import IEX_CLOUD_API_TOKEN
 symbol = 'AAPL'
 api_url = f'https://sandbox.iexapis.com/stable/stock/{symbol}/quote?token={IEX_CLOUD_API_TOKEN}'
 data = requests.get(api_url).json()
-#data
 
 
 # In[291]:
